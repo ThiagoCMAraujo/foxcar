@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Aluguel\AluguelController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,6 @@ Route::get('/', function () {
 // Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/alugar-carro', [AluguelController::class, 'alugueis'])->name('alugueis');
-Route::get('/alugar-carro', [AluguelController::class, 'alugar'])->name('alugar.carro');
+Route::get('/alugar-carro', [AluguelController::class, 'locacoes'])->name('locacoes');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/alugar-carro', [AluguelController::class, 'alugar'])->name('alugar.carro');

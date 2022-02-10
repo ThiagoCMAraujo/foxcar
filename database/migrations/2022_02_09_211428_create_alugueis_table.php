@@ -14,8 +14,12 @@ class CreateAlugueisTable extends Migration
     public function up()
     {
         Schema::create('alugueis', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigInteger('carro_id');
+            $table->bigInteger('cliente_id');
+            $table->date('data_aluguel');
+
+            $table->foreign('carro_id')->references('id')->on('carros');
+            $table->foreign('cliente_id')->references('id')->on('clientes');
         });
     }
 

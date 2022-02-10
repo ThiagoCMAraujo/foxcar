@@ -16,10 +16,11 @@ class CreateCarrosTable extends Migration
         Schema::create('carros', function (Blueprint $table) {
             $table->id();
             $table->char('placa', 7)->unique();
-            $table->integer('year');
+            $table->integer('ano');
             $table->bigInteger('modelo_id');
             $table->float('valor');
             $table->timestamps();
+            $table->boolean('disponivel');
 
             $table->foreign('modelo_id')->references('id')->on('modelo');
         });

@@ -10,6 +10,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ asset('site/bootstrap.css') }}">
+
 
     <!-- Styles -->
 
@@ -22,10 +24,9 @@
 </style>
 
 <body class="background">
-
     <x-navbar />
-
-
 </body>
 
 </html>
+<script src="{{ asset('site/jquery.js') }}"></script>
+<script src="{{ asset('site/bootstrap.js') }}"></script>

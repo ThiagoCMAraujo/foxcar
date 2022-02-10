@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class AluguelController extends Controller
 {
 
-    public function alugueis()
+    public function locacoes()
     {
-        return view('aluguel\aluguel');
+        return view('aluguel.alugar');
     }
 
     public function alugar(Request $request){

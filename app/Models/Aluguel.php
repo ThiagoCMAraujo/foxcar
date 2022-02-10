@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Aluguel extends Model
 {
+    public $timestamps = false;
     public $table = 'alugueis';
     use HasFactory;
 

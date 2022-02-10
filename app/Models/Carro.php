@@ -13,7 +13,8 @@ class Carro extends Model
     'placa',
     'ano',
     'modelo_id',
-    'valor'
+    'valor',
+    'disponivel'
     ];
 
     public function modelo(){
