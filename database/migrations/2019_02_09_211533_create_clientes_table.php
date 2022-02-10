@@ -18,7 +18,6 @@ class CreateClientesTable extends Migration
             $table->bigInteger('cpf')->unique();
             $table->string('nome');
             $table->string('nome_completo');
-            $table->timestamps();
         });
     }
 

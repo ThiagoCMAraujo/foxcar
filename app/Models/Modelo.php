@@ -9,12 +9,17 @@ class Modelo extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
     protected $fillable = [
         'marca_id',
         'nome'
     ];
 
-    public function marca(){
+    protected $primary = ['carro_id', 'cliente_id'];
+    public $incrementing = false;
+
+    public function marca()
+    {
         $this->hasOne(Marca::class, 'id', 'marca_id');
     }
 }

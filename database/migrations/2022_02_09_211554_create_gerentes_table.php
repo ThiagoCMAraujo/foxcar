@@ -16,7 +16,6 @@ class CreateGerentesTable extends Migration
         Schema::create('gerentes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
         });

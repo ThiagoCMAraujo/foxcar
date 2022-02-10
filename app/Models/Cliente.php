@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     protected $fillable = [
         'cpf',
         'nome_completo',

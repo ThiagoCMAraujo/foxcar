@@ -17,12 +17,12 @@ class CreateCarrosTable extends Migration
             $table->id();
             $table->char('placa', 7)->unique();
             $table->integer('ano');
-            $table->bigInteger('modelo_id');
+            $table->unsignedBigInteger('modelo_id');
             $table->float('valor');
             $table->timestamps();
             $table->boolean('disponivel');
 
-            $table->foreign('modelo_id')->references('id')->on('modelo');
+            $table->foreign('modelo_id')->references('id')->on('modelos');
         });
     }
 
